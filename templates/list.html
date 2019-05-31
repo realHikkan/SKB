@@ -1,0 +1,19 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+    <table border="2">
+        <caption>Таблица</caption>
+        {% for cert in cert_list %}
+       <tr>
+           <th>{{ cert["CN"] }}</th><td>{{ cert["Validity_Not_After"] }}</td><td>{{ cert["Valid"] }}</td>
+       </tr>
+        {% endfor %}
+
+    </table>
+{{ user["username"] }}
+    </body>
+</html>
