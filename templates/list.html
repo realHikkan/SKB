@@ -9,7 +9,7 @@
         <caption>Таблица</caption>
         {% for cert in cert_list %}
        <tr>
-           <th>{{ cert["CN"] }}</th><td>{{ cert["Validity_Not_After"] }}</td><td>{{ cert["Valid"] }}</td>
+           <th>{{ cert.get_common_name() }}</th><td>{{ cert.get_date() }}</td><td>{{ cert.get_valid() }}</td>
        </tr>
         {% endfor %}
 
